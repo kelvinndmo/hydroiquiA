@@ -1,0 +1,44 @@
+
+  <ngx-spinner></ngx-spinner>
+
+            <mat-table [dataSource]="dataSource" class="mat-elevation-z8 table-dashboard">
+                <!-- Position Column -->
+                <ng-container matColumnDef="serial">
+                  <mat-header-cell *matHeaderCellDef> serial </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.serial}} 
+                         
+                </mat-cell>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="manufacturer">
+                  <mat-header-cell *matHeaderCellDef> manufacturer </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.manufacturer}} </mat-cell>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="description">
+                  <mat-header-cell *matHeaderCellDef> description </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+                </ng-container>
+              
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="CreatedAt">
+                  <mat-header-cell *matHeaderCellDef> CreatedAt </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.CreatedAt}} </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="UpdatedAt">
+                    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.UpdatedAt}} </mat-cell>
+                  </ng-container>
+                  <ng-container matColumnDef="edit">
+                    <mat-header-cell *matHeaderCellDef> Edit </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> <i class="material-icons">local_dining</i>  </mat-cell>
+                  </ng-container>
+              
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+              </mat-table>
+
+
+  
